@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc --build",
     "dev": "tsnd --transpile-only --rs --ignore-watch node_modules src/index.ts",
-    "start": "nodemon dist/index.js"
+    "start": "nodemon dist/index.js",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
   },
   "keywords": [],
   "author": "",

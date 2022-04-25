@@ -3,8 +3,11 @@ import express, { Express } from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import schemaFn from './schemas';
 import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
+import createConnection from './typeorm';
+
 
 const main = async () => {
+  createConnection();
   const schema = await schemaFn();
   const apolloServer = new ApolloServer({
     schema,
